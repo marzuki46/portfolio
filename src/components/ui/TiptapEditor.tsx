@@ -42,7 +42,7 @@ export default function TiptapEditor({ value, onChange, placeholder = "Mulai men
     ],
     editorProps: {
       attributes: {
-        class: "prose prose-sm max-w-none focus:outline-none min-h-[300px] px-4 py-3",
+        class: "prose prose-sm max-w-none focus:outline-none min-h-[500px] px-4 py-3",
       },
     },
     onUpdate: ({ editor }) => {
@@ -177,7 +177,7 @@ export default function TiptapEditor({ value, onChange, placeholder = "Mulai men
       </div>
 
       {/* Editor Content */}
-      <EditorContent editor={editor} className="min-h-[300px]" />
+      <EditorContent editor={editor} className="min-h-[500px]" />
 
       {/* Bubble Menu */}
       {editor && (

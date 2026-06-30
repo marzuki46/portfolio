@@ -404,7 +404,7 @@ export default function AdminBlog() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-background rounded-2xl border border-border p-6 w-full max-w-2xl max-h-[80vh] overflow-y-auto"
+            className="bg-background rounded-2xl border border-border p-6 w-full max-w-5xl max-h-[90vh] overflow-y-auto"
           >
             <h2 className="text-xl font-bold mb-4">
               {editingPost ? "Edit Post" : "Tambah Post Baru"}
