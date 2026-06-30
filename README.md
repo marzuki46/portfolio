@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Marzuki
 
-## Getting Started
+Personal portfolio website built with **Next.js 15**, featuring projects, blog, and a full-featured admin panel with content management system, AI integration, and SEO optimization.
 
-First, run the development server:
+## ✨ Key Features
+
+### Frontend
+- **Portfolio Showcase** — Project display with category filtering and detailed pages
+- **Blog System** — Blog with categories, tags, and related articles
+- **Modern Design** — Modern UI/UX with Framer Motion animations
+- **Responsive** — Optimized for all devices
+- **Dark Mode** — Light/dark theme support
+
+### Admin Panel
+- **Dashboard** — Stats overview and activity tracking
+- **Project Management** — CRUD operations with image upload
+- **Blog Management** — CRUD articles with SEO fields
+- **Message Management** — View and manage visitor messages
+- **SEO Settings** — Global SEO configuration, meta tags, sitemap
+- **AI Content Generator** — Generate content using AI (OpenAI)
+
+### Optimization
+- **SEO** — Dynamic meta tags, Open Graph, sitemap.xml, robots.txt
+- **Performance** — Server Components, dynamic imports, image optimization
+- **Database** — Prisma ORM with SQLite (development) / PostgreSQL (production)
+- **API** — REST API endpoints for blog, projects, and messages
+
+## 🚀 Tech Stack
+
+| Technology | Usage |
+|-----------|-------|
+| Next.js 15 | React Framework with App Router |
+| TypeScript | Type safety |
+| Tailwind CSS | Utility-first styling |
+| Framer Motion | Animations |
+| Prisma ORM | Database ORM |
+| SQLite / PostgreSQL | Database |
+| OpenAI API | AI content generation |
+| Lucide React | Icon library |
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Setup Steps
 
 ```bash
+# Clone repository
+git clone https://github.com/marzuki/portfolio.git
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Copy environment variables
+cp .env.example .env
+
+# Setup database
+npx prisma migrate dev
+
+# Seed initial data
+npx prisma db seed
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Environment Variables
+```env
+DATABASE_URL="file:./dev.db"  # SQLite for development
+# or
+DATABASE_URL="postgresql://user:password@localhost:5432/portfolio"
 
-## Learn More
+OPENAI_API_KEY="sk-..."  # For AI content generator (optional)
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Initial Setup
+1. Visit `http://localhost:3000/setup` for the installation wizard
+2. Create an admin account
+3. Configure website settings
+4. Start adding projects and blog articles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+portfolio/
+├── prisma/
+│   ├── schema.prisma      # Database schema
+│   └── seed.ts            # Database seeder
+├── public/                # Static assets
+├── src/
+│   ├── app/
+│   │   ├── admin/         # Admin panel pages
+│   │   ├── api/           # REST API routes
+│   │   ├── blog/          # Blog pages
+│   │   ├── projects/      # Project pages
+│   │   ├── setup/         # Installation wizard
+│   │   ├── layout.tsx     # Root layout
+│   │   └── page.tsx       # Homepage
+│   ├── components/
+│   │   ├── sections/      # Section components (Hero, Projects, etc.)
+│   │   └── ui/            # UI components (Button, Card, etc.)
+│   └── lib/
+│       ├── data.ts        # Static data (fallback)
+│       ├── prisma.ts      # Prisma client
+│       └── utils.ts       # Utility functions
+└── package.json
+```
 
-## Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploy to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/marzuki/portfolio)
+
+1. Push repository to GitHub
+2. Import project on [Vercel](https://vercel.com)
+3. Set environment variables
+4. Deploy 🚀
+
+### Manual Deployment
+
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## 📄 License
+
+MIT License — see [LICENSE](LICENSE) for details.
+
+## 📞 Contact
+
+- Website: [https://marzuki.dev](https://marzuki.dev)
+- Email: hello@marzuki.dev
+- GitHub: [@marzuki](https://github.com/marzuki)
+- LinkedIn: [in/marzuki](https://linkedin.com/in/marzuki)
