@@ -21,7 +21,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-0"
+      className="relative min-h-screen flex items-start justify-center overflow-hidden scroll-mt-0 pt-28 md:pt-32"
     >
       {/* Parallax Background Layer */}
       <motion.div style={{ y }} className="absolute inset-0">
